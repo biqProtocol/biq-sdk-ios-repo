@@ -14,9 +14,8 @@ The **BIQ iOS SDK** is a lightweight library that enables **proof of presence** 
 - 🛠 Debug tools (logs export, debug mode)
 - 🔑 Session handling (API key + refresh token)
 - 🚪 Logout and lifecycle management
-- 📲 Permissions handling (Location, Bluetooth, Notifications)
+- 📲 Permissions handling (Location, Bluetooth)
 - ♻️ Background support (BLE & Location updates)
-- 🔔 Notifications customization
 - 📡 SDK state listeners (presence state, scanning state, validation records)
 
 ---
@@ -174,7 +173,6 @@ Add these to your **Info.plist** with descriptive messages:
 - `NSLocationWhenInUseUsageDescription`
 - `NSLocationAlwaysUsageDescription`
 - `NSLocationAlwaysAndWhenInUseUsageDescription`
-- `NSUserNotificationUsageDescription`
 - `NSBluetoothAlwaysUsageDescription`
 
 Enable **Background Modes**:
@@ -188,21 +186,6 @@ UIBackgroundModes:
 Additionally, enable:
 - **Uses Bluetooth LE accessories**
 - **Location updates**
-
----
-
-## 🔔 Notifications
-
-You can customize notification texts:
-
-```swift
-BiqController.shared.initNotificationData(
-    scanningNotificationTitle: "Scanning...",
-    scanningNotificationMessage: "Looking for nearby devices",
-    proximityNotificationTitle: "Nearby Device Detected",
-    proximityNotificationMessage: "You are close to a beacon"
-)
-```
 
 ---
 
@@ -256,7 +239,6 @@ Task {
 ### Configuration
 - `setDebugMode(_:)` – Enable verbose logging.
 - `setBootAutoScan(isStartAfterBoot:)` – Allow auto-scan after reboot.
-- `initNotificationData(...)` – Customize notification texts.
 
 ---
 
