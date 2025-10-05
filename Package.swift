@@ -16,7 +16,7 @@ let package = Package(
         .binaryTarget(
             name: "biqSdk",
             url: "https://biqprotocol.github.io/biq-sdk-ios-repo/biqSdk.xcframework.zip",
-            checksum: "c7ff9db3e0953068531385dd2d856b8ed2fd9036efc978e2e516e2a089ecc186"
+            checksum: "80e7373b9845d096e7ae5d72a995dea189660eb3e7f5ce4ff80080e27098ff24"
         )
     ]
 )
